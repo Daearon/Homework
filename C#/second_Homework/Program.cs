@@ -17,7 +17,7 @@
 
 // Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 /*
-static int SecondNumber (int num) 
+static int GetSecondNumber (int num) 
 {
     int hundreds = num / 10;
     int secondNumber = hundreds % 10;
@@ -30,7 +30,7 @@ int findedSecondNumber = 0;
 
 if (number > 99 && number < 1000) 
 {
-    findedSecondNumber = SecondNumber(number);
+    findedSecondNumber = GetSecondNumber(number);
 }
 else 
 {
@@ -43,7 +43,7 @@ Console.WriteLine($"Вторая цифра из трехзначного чис
 
 // Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 /*
-static int ThirdNumber (int num) 
+static int GetThirdNumber (int num) 
 {
     int thirdNumber = 0;
     if (num > 99)
@@ -66,13 +66,13 @@ if (number < 100)
     return;
 } 
 
-findedThirdNumber = ThirdNumber(number);
+findedThirdNumber = GetThirdNumber(number);
 Console.WriteLine($"Третья цифра из числа - это {findedThirdNumber}");
 */
 
 // Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
-static int WhatDay (int num) 
+static int FindWhatDay (int num) 
 {
     int weekdayOrWeekend = 0;
     if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5)
@@ -91,7 +91,7 @@ int whatDay = 0;
 
 if (number <= 7 && number > 0) 
 {
-    whatDay = WhatDay(number);
+    whatDay = FindWhatDay(number);
     if (whatDay == 0) 
         {
             Console.WriteLine("Нет, у вас будний день");
