@@ -71,28 +71,28 @@ Console.WriteLine($"Третья цифра из числа - это {findedThir
 */
 
 // Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-/*
-static int FindWhatDay (int num) 
+
+static bool FindWhatDay (int num) 
 {
-    int weekdayOrWeekend = 0;
+    bool weekdayOrWeekend;
     if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5)
     {
-        weekdayOrWeekend = 0;
+        weekdayOrWeekend = false;
     }
     else 
     {
-        weekdayOrWeekend = 1;
+        weekdayOrWeekend = true;
     }
     return weekdayOrWeekend;
 }
 
 int number = RetrieveInteger("Введите число от 1 до 7 и мы узнаем, выходной ли это");
-int whatDay = 0;
+bool whatDay;
 
 if (number <= 7 && number > 0) 
 {
     whatDay = FindWhatDay(number);
-    if (whatDay == 0) 
+    if (whatDay == false) 
         {
             Console.WriteLine("Нет, у вас будний день");
         } 
@@ -106,4 +106,4 @@ else
     Console.WriteLine("Вы ввели недопустимое число, попробуйте еще раз");
     return;
 }
-*/
+//*/
