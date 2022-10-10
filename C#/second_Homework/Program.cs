@@ -1,4 +1,4 @@
-﻿static int RetrieveInteger (string msg)
+﻿// static int RetrieveInteger (string msg)
 {
     Console.WriteLine(msg);
     while (true)
