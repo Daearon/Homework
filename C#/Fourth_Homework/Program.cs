@@ -57,9 +57,8 @@ int FindSum(int number)
     return sum;
 }
 
-int number = RetrieveInteger("Input your number: ");
-int positiveNumber = Math.Abs(number);
-int result = FindSum(positiveNumber);
+int number = Math.Abs(RetrieveInteger("Input your number: "));
+int result = FindSum(number);
 Console.WriteLine($"Sum of digit in your number is {result}");
 */
 
@@ -104,11 +103,10 @@ void ShowArray(int[] array)
     Console.WriteLine();
 }
 
-int size = RetrieveInteger("Input your amount of elements: ");
-int positiveSize = Math.Abs(size);
+int size = Math.Abs(RetrieveInteger("Input your amount of elements: "));
 int min = RetrieveInteger("Input minimal value for your array: ");
 int max = RetrieveInteger("Input maximal value for your array: ");
 
-int[] userArray = CreateRandomArray(positiveSize, min, max);
+int[] userArray = CreateRandomArray(size, min, max);
 ShowArray(userArray);
 */
