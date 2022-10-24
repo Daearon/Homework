@@ -153,7 +153,7 @@ void ShowArray(int[] array)
     Console.WriteLine();
 }
 
-int[] FindSummofElements (int[,] array, int columns)
+int[] FindArithmeticMeanofColumns (int[,] array, int columns)
 {
     int sum;
     int[] newArray = new int[array.GetLength(1)];
@@ -164,17 +164,7 @@ int[] FindSummofElements (int[,] array, int columns)
         {
             sum += array[j, i];
         }
-        newArray[i] = sum;
-    }
-    return newArray;
-}
-
-int [] FindArithmeticMean (int[] array, int size)
-{
-    int[] newArray = new int[size];
-    for(int i = 0; i < array.Length; i++)
-    {
-        newArray[i] = array[i]/size;
+        newArray[i] = sum/array.GetLength(1);
     }
     return newArray;
 }
@@ -185,8 +175,6 @@ Console.Write("Input your number of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
 int[,] myArray = Create2dArray(rows, columns);
 Show2dArray(myArray);
-int[] newArray = FindSummofElements(myArray, columns);
+int[] newArray = FindArithmeticMeanofColumns(myArray, columns);
 ShowArray(newArray);
-int[] arithmeticMeanArray = FindArithmeticMean(newArray, columns);
-ShowArray(arithmeticMeanArray);
 */
